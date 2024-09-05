@@ -1,0 +1,328 @@
+@font-face {
+    font-family: gilroy;
+    src: url(./gilroy/Gilroy-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: gilroy;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url('./postoffice3\ \(1\).jpg') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.shade{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.464);
+    position: absolute;
+    z-index: 1;
+}
+.hero-content{
+    width: 65%;
+    height: 80%;
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    /* background-color: green; */
+}
+.hero-content h1 {
+    line-height:10vh;
+    /* background-color: red; */ 
+    font-size: 6rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+.text{
+    width: 100%;
+    /* background-color: red; */
+}
+
+.cta-buttons{
+    position: absolute;
+    bottom: 20%;
+}
+.cta-buttons .btns {
+    background: orangered;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cta-buttons .btns:hover {
+    background: rgb(153, 43, 3);
+}
+
+
+/* Introduction Section */
+#introduction {
+   
+    position: relative;
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    height: 100vh; /* Adjust as needed */
+    /* background-color: #1b0f00; */
+    background-color: #885615;
+}
+.intro{
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 15%;
+    border-top-left-radius: 15% ;
+    background: url(./polymorfism.avif)no-repeat center center/cover;
+
+}
+.intro-text {
+    height: 70%;
+    width: 35%;
+    left: 8%;
+    top: 25%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.2); /* Light, transparent white */
+    backdrop-filter: blur(10px) saturate(150%); /* Glassmorphism effect */
+    border-radius: 10px; /* Rounded corners for the glass look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    color: white;
+    padding: 5vh;
+}
+
+
+#introduction h2 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 4rem;
+}
+.intro-text h3{
+    margin-top: 5vh;
+    font-size: 2rem;
+}
+.intro-text p {
+    font-size: 1.2rem;
+}
+
+.intro-visual {
+    height: 60%;
+    width: 40%;
+    position: absolute;
+    right: 8%;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-visual img {
+   height: 100%;
+   border-radius: 15px;
+
+}
+
+
+/* Key Features */
+#features {
+    background: url(./postoffice.jpg) no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr; /* Header, content, and bottom */
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    gap: 5vw;
+    padding: 3vw 4vw; /* Top-bottom and left-right padding */
+    text-align: center;
+    background-color: #885615;
+    color: white;
+}
+
+#features h2 {
+    grid-column: 1 / span 3;
+    font-size: 4rem;
+    margin-bottom: 8vh;
+    font-weight: 900;
+    z-index: 2;
+}
+
+.feature-block {
+    height: 60vh;
+    width: 25vw;
+    position: relative;
+    /* background-color: #372001; */
+    padding: 2.5vh;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    z-index: 2; 
+    background: rgba(255, 255, 255, 0.2); /* Light, transparent white */
+    backdrop-filter: blur(10px) saturate(150%); /* Glassmorphism effect */
+    border-radius: 10px; /* Rounded corners for the glass look */
+    color: white;
+    padding: 3vh;
+}
+
+.feature-block img {
+    height: 10vh;
+    margin-bottom: 10px;
+}
+
+.feature-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5vh;
+}
+
+.feature-block p {
+    font-size: 1rem;
+    margin-bottom: 3vh;
+
+}
+
+/* Button Styling */
+#features .btn {
+    grid-column: 1 / span 3;
+    background: orangered;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded button corners */
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1rem; /* Adjust font size */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+#features .btn:hover {
+    background: rgb(153, 43, 3);
+}
+
+/* Grid Placement */
+#features .feature-block:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#features .feature-block:nth-child(2) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#features .feature-block:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2; /* Adjusted to fit within the grid layout */
+}
+
+
+/* Graphs/Charts Section */
+#graphs {
+    position: relative;
+    padding: 5vh;
+    background-color: #130F0B;
+    color: white;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+}
+#graphs h2{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    font-weight: 900;
+    
+} 
+canvas {
+    
+        height: 100% !important; /* Set a fixed height */
+        
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+        margin-right: 1vw;
+        /* background: rgba(227, 202, 202, 0.2);  */
+        background: url(./polymorfism.avif);
+        backdrop-filter: blur(10px) saturate(150%); /* Glassmorphism effect */
+        border-radius: 10px; /* Rounded corners for the glass look */
+        color: white;
+       
+    }
+    /* #graph2{
+        position: absolute;
+        right: 10%;
+    }
+    #graph3{
+        position: absolute;
+        left: 10%;
+    } */
+/* .chart-container{
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw;
+    background: url(./graphs.jpg) no-repeat center center/cover;
+}
+.chart-container img {
+    width: 100%;
+    height: 100%;
+} */
+
+/* Contact Us Section */
+#contact {
+    background-color: #130F0B;
+    min-height: 40vh;
+    color: #877B6D;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: #877B6D solid 1px;
+}
+#contact h2{
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+#contact address p {
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #130F0B;
+    padding: 20px;
+    color:#877B6D;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
